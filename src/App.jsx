@@ -22,10 +22,19 @@ useEffect(() => {
     const isExist = inProgressTickets.find((t) => t.id === ticket.id);
     if (!isExist) {
       setInProgressTickets([...inProgressTickets, ticket]);
-      toast.info(`Ticket #${ticket.id} added to In-Progress!`, { position: "top-center" });
-    } else {
-      toast.warning(`Ticket #${ticket.id} is already in progress!`);
-    }
+    //   toast.info(`Ticket #${ticket.id} added to In-Progress!`, { position: "top-center" });
+    // } else {
+    //   toast.warning(`Ticket #${ticket.id} is already in progress!`);
+    // }
+    const updatedTickets = allTickets.map(t => 
+      t.id === ticket.id ? { ...t, status: "In-Progress" } : t
+    );
+    setAllTickets(updatedTickets);
+
+    toast.info(`Ticket #${ticket.id} is now In-Progress!`);
+  } else {
+    toast.warning(`Ticket #${ticket.id} is already being managed!`);
+  }
   };
 
   const handleMarkAsResolved = (ticketId) => {
