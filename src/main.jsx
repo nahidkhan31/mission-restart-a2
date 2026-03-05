@@ -5,7 +5,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <div className="font-urbanist">
+   <div className="min-h-screen bg-gray-50 flex flex-col font-urbanist">
      <App />
    </div>
   </StrictMode>,
