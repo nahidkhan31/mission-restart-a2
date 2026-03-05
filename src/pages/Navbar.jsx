@@ -3,7 +3,7 @@ import { FiPlus } from 'react-icons/fi';
 
 const Navbar = () => {
     return (
-      <nav className="navbar bg-white text-base-content px-4 md:px-10 shadow-sm sticky top-0 z-50">
+      <nav className="navbar bg-white/70 backdrop-blur-md text-base-content px-4 md:px-10 shadow-sm sticky top-0 z-50">
       <div className="flex-1">
         <h1 className="text-xl md:text-2xl font-bold text-blue-900">
           CS — Ticket System
@@ -26,7 +26,7 @@ const Navbar = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52 text-sm font-medium"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white/70 backdrop-blur-md rounded-box w-52 text-sm font-medium"
           >
             <li><a className="hover:text-blue-600">Home</a></li>
             <li><a className="hover:text-blue-600">FAQ</a></li>

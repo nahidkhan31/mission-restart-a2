@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Banner from "./pages/Banner";
 import TicketList from "./pages/TicketList";
 import TaskStatus from "./pages/TaskStatus";
+import Footer from "./pages/Footer";
 
 function App() {
   const [allTickets, setAllTickets] = useState([]);
@@ -63,6 +64,7 @@ useEffect(() => {
           />
         </div>
       </main>
+      <Footer/>
       </div>
      
 
